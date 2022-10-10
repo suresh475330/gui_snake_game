@@ -1,0 +1,51 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build with GCC 10.2.1",
+			"command": "/usr/bin/g++-10",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++20",
+				"${workspaceFolder}/*.cpp",
+				"-o",
+				"${fileDirname}/rooster",
+				"-lsfml-graphics", "-lsfml-window", "-lsfml-system", "-lm",
+                "-I/usr/include/"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/g++-10"
+		},
+		{
+			"type": "cppbuild",
+			"label": "bulid with clang 11.0.1",
+			"command": "/usr/bin/clang++-11",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++20",
+				"${workspaceFolder}/*.cpp",
+				"-o",
+				"${fileDirname}/rooster",
+				"-lsfml-graphics", "-lsfml-window", "-lsfml-system", "-lm",
+                "-I/usr/include/"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/clang++-11"
+		}
+	]
+}
